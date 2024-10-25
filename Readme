@@ -1,0 +1,26 @@
+ImageCropper
+ImageCropper is a simple command-line tool for cropping images in Golang. Specify coordinates and dimensions, and quickly crop any part of an image. The output image is saved in your specified location.
+
+Features
+Crop images by defining x and y coordinates along with width and height
+Save cropped images in desired formats and locations
+Installation
+To install the required package, run:
+
+bash
+Copy code
+go get -u github.com/disintegration/imaging
+Usage
+bash
+Copy code
+go run main.go -input=input.jpg -output=cropped.jpg -x0=50 -y0=50 -width=200 -height=200
+Arguments
+-input: Path to the input image file (required)
+-output: Path to save the cropped output image (default: output.jpg)
+-x0, -y0: Coordinates of the top-left corner for cropping
+-width, -height: Dimensions of the crop area
+Example
+bash
+Copy code
+go run main.go -input=photo.jpg -output=result.jpg -x0=100 -y0=150 -width=300 -height=200
+This will crop a 300x200 area starting from coordinates (100, 150) in photo.jpg and save it as result.jpg.
